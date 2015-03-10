@@ -16,4 +16,7 @@ git clone https://github.com/pseudom/ezpaarse-mongo.git
 
 ```
 
-Fill {{variable-value}} with your needs
+Fill {{ezpaarse-mongo-path}}, {{ezpaarse-mongo-user}}, {{ezpaarse-mongo-group}} with your needs in etc/mongod.conf and etc/init.d/mongod files.
+Check that {{ezpaarse-mongo-port}} is in mongo URL from your ezpaarse config.local.conf (like "EZPAARSE_MONGO_URL": "mongodb://localhost:50000/ezpaarse")
+
+
