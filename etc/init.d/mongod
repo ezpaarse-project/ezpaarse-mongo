@@ -29,8 +29,8 @@ DBPATH=`awk -F= '/^dbpath[[:blank:]]*=[[:blank:]]*/{print $2}' "$CONFIGFILE"`
 PIDFILEPATH=`awk -F= '/^pidfilepath[[:blank:]]*=[[:blank:]]*/{print $2}' "$CONFIGFILE"`
 mongod=${MONGOD-/usr/bin/mongod}
 
-MONGO_USER=analogist
-MONGO_GROUP=analogist
+MONGO_USER={{ezpaarse-mongo-user}}
+MONGO_GROUP={{ezpaarse-mongo-group}}
 
 if [ -f "$SYSCONFIG" ]; then
     . "$SYSCONFIG"
