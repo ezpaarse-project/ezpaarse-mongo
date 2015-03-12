@@ -89,3 +89,21 @@ verbose=true
 #keyFile=/path/to/keyfile
 
 EOT
+
+cat << EOT > $EZPAARSE_MONGO_PATH/config.local.json
+{
+  "EZPAARSE_MONGO_URL": "mongodb://localhost:$EZPAARSE_MONGO_PORT/ezpaarse",
+}
+
+EOT
+
+
+echo "Mongod configuration file for ezpaarse generated"
+echo "$EZPAARSE_MONGO_PATH/etc/mongod.conf"
+echo "please run :"
+echo "./etc/init.d/mongod start"
+echo "to start the mongod for ezpaarse instance"
+echo
+echo "copy $EZPAARSE_MONGO_PATH/config.local.json "
+echo "in your ezpaarse installation (or update it with the EZPAARSE_MONGO_URL value)"
+
