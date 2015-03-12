@@ -12,7 +12,7 @@ You must have an [ezpaarse installation](https://github.com/ezpaarse-project/ezp
 
 To install ezpaarse-mongo on a Unix-type system, open a terminal and type:
 ```shell
-git clone https://github.com/pseudom/ezpaarse-mongo.git
+git clone https://github.com/ezpaarse-project/ezpaarse-mongo
 cd ezpaarse-mongo
 ./init-config
 ```
