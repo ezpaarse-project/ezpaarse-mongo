@@ -5,7 +5,7 @@ You will use this sample if you want to have ezpaarse dedicated mongo database i
 
 ## Prerequisites ##
 
-You must have an ezpaarse installation ready to run
+You must have an [ezpaarse installation](https://github.com/ezpaarse-project/ezpaarse) and [mongodb](https://github.com/ezpaarse-project/ezpaarse/blob/master/doc/quickstart.md#installation-de-mongodb) ready to run
 
 ## Installation quickstart ##
 
@@ -13,10 +13,14 @@ You must have an ezpaarse installation ready to run
 To install ezpaarse-mongo on a Unix-type system, open a terminal and type:
 ```shell
 git clone https://github.com/pseudom/ezpaarse-mongo.git
-
+cd ezpaarse-mongo
+./init-config
 ```
 
-Fill {{ezpaarse-mongo-path}}, {{ezpaarse-mongo-user}}, {{ezpaarse-mongo-group}} with your needs in etc/mongod.conf and etc/init.d/mongod files.
-Check that {{ezpaarse-mongo-port}} is in mongo URL from your ezpaarse config.local.conf (like "EZPAARSE_MONGO_URL": "mongodb://localhost:50000/ezpaarse")
+This will generate all the stuff needed for your mongo instance for ezpaarse
 
+To start your mongo for ezpaarse :
+```shell
+./etc/init.d/mongod start
+```
 
