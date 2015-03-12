@@ -23,4 +23,5 @@ To start your mongo for ezpaarse :
 ```shell
 ./etc/init.d/mongod start
 ```
+To connect ezpaarse with your mongod instance, copy the generated config.local.json file in your ezpaarse installation (or update yours with the EZPAARSE_MONGO_URL value) and restart ezpaarse.
 
