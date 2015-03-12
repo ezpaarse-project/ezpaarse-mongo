@@ -21,7 +21,7 @@ rc_reset
 
 # NOTE: if you change any OPTIONS here, you get what you pay for:
 # this script assumes all options are in the config file.
-CONFIGFILE="{{ezpaarse-mongo-path}}/mongo/etc/mongod.conf"
+CONFIGFILE="{{ezpaarse-mongo-path}}/etc/mongod.conf"
 OPTIONS=" -f $CONFIGFILE"
 SYSCONFIG="/etc/sysconfig/mongod"
 
@@ -68,7 +68,7 @@ start()
   $NUMACTL /sbin/start_daemon -u "$MONGO_USER" -p "$PIDFILEPATH" $mongod $OPTIONS >/dev/null 2>&1
 
   RETVAL=$?
-  [ $RETVAL -eq 0 ] && touch {{ezpaarse-mongo-path}}/mongo/var/lock/subsys/mongod
+  [ $RETVAL -eq 0 ] && touch {{ezpaarse-mongo-path}}/var/lock/subsys/mongod
   return $RETVAL
 }
 
@@ -77,7 +77,7 @@ stop()
   echo -n "Stopping mongod: "
   mongo_killproc "$PIDFILEPATH" $mongod
   RETVAL=$?
-  [ $RETVAL -eq 0 ] && rm -f {{ezpaarse-mongo-path}}/mongo/var/lock/subsys/mongod
+  [ $RETVAL -eq 0 ] && rm -f {{ezpaarse-mongo-path}}/var/lock/subsys/mongod
   return $RETVAL
 }
 
