@@ -92,7 +92,7 @@ EOT
 
 cat << EOT > $EZPAARSE_MONGO_PATH/config.local.json
 {
-  "EZPAARSE_MONGO_URL": "mongodb://localhost:$EZPAARSE_MONGO_PORT/ezpaarse",
+  "EZPAARSE_MONGO_URL": "mongodb://localhost:$EZPAARSE_MONGO_PORT/ezpaarse"
 }
 
 EOT
